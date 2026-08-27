@@ -1,4 +1,10 @@
-open('model.pkl', 'rb') as f:
+from flask import Flask, request, jsonify
+import pickle
+import numpy as np
+
+app = Flask(_name_)
+
+with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 @app.route('/')
